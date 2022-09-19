@@ -2,6 +2,8 @@
 
 ![](./assets/nlw.gif)
 
+As seguintes ferramentas foram usadas na construção do projeto:
+
 - [x] React
 - [x] Node
 - [x] Typescript
