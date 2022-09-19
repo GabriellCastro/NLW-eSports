@@ -38,19 +38,21 @@ function CreateAdModal() {
       return;
     }
 
+    const objAd = {
+      name: data.name,
+      yearsPlaying: Number(data.yearsPlaying),
+      discord: data.discord,
+      weekDays: weekDays.map(Number),
+      hourStart: data.hourStart,
+      hourEnd: data.hourEnd,
+      useVoiceChannel: useVoiceChannel,
+    };
+
     try {
-      await axios.post(`http://localhost:3001/games/${data.game}/ads`, {
-        name: data.name,
-        yearsPlaying: Number(data.yearsPlaying),
-        discord: data.discord,
-        weekDays: weekDays.map(Number),
-        hourStart: data.hourStart,
-        hourEnd: data.hourEnd,
-        useVoiceChannel: useVoiceChannel,
-      });
+      await axios.post(`http://localhost:3001/games/${data.game}/ads`, objAd);
       toast("Anúncio criado com sucesso!");
     } catch (error) {
-      toast(error + " -- Erro ao criar anúncio");
+      toast("Erro ao criar anúncio");
     }
   };
 
