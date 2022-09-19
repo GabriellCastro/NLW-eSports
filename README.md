@@ -5,6 +5,7 @@
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [x] React
+- [x] React Native
 - [x] Node
 - [x] Typescript
 - [x] Express
